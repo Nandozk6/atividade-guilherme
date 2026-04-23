@@ -1,0 +1,199 @@
+/* Planos.css - Página de planos */
+
+/* Hero da página */
+.page-header {
+    background: linear-gradient(135deg, rgba(13,13,13,0.95), rgba(13,13,13,0.8)),
+                url('../imagens/planos-bg.jpg') center/cover;
+    padding: 120px 0 60px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Planos */
+.planos-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.plano-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.plano-card:hover {
+    transform: translateY(-10px);
+}
+
+.plano-card.destacado {
+    border: 2px solid var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+.plano-card.destacado:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.tag-mais-vendido {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 5px 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.plano-card h3 {
+    background: var(--cor-escura);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.plano-card.destacado h3 {
+    background: var(--cor-primaria);
+    color: var(--cor-escura);
+}
+
+.preco {
+    text-align: center;
+    padding: 25px;
+    background: #f8f9fa;
+}
+
+.preco .valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.preco .periodo {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.beneficios-lista {
+    list-style: none;
+    padding: 25px;
+}
+
+.beneficios-lista li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.beneficios-lista li.disabled {
+    color: #ccc;
+}
+
+.plano-card .btn {
+    display: block;
+    text-align: center;
+    margin: 0 25px 25px;
+}
+
+/* Comparativo */
+.comparativo {
+    padding: 80px 0;
+}
+
+.comparativo-tabela {
+    overflow-x: auto;
+}
+
+.comparativo-tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparativo-tabela th,
+.comparativo-tabela td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.comparativo-tabela th {
+    background: var(--cor-escura);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.comparativo-tabela td:first-child {
+    text-align: left;
+    font-weight: bold;
+    background: #f8f9fa;
+}
+
+.comparativo-tabela tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, rgba(13,13,13,0.95), rgba(13,13,13,0.9));
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .planos-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .plano-card.destacado {
+        transform: none;
+    }
+
+    .comparativo-tabela th,
+    .comparativo-tabela td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}

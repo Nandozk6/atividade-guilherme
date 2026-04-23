@@ -1,0 +1,154 @@
+/* Plano.css - Detalhes do plano */
+
+/* Hero */
+.page-hero {
+    background: linear-gradient(135deg, rgba(13,13,13,0.95), rgba(13,13,13,0.8)),
+                url('../imagens/plano-bg.jpg') center/cover;
+    padding: 120px 0 40px;
+    margin-top: 60px;
+}
+
+.breadcrumb {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #999;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--cor-primaria);
+}
+
+.breadcrumb span {
+    color: var(--cor-primaria);
+}
+
+/* Conteudo do plano */
+.plano-detalhes {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.plano-info {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.plano-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.preco-grande {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.preco-grande .periodo {
+    font-size: 1rem;
+    color: #666;
+}
+
+.descricao {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Beneficios detalhados */
+.conteudo-plano {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.beneficios-detalhados {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.beneficios-detalhados h2 {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.beneficios-detalhados ul {
+    list-style: none;
+}
+
+.beneficios-detalhados li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.beneficios-detalhados li:last-child {
+    border-bottom: none;
+}
+
+.check {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.beneficios-detalhados li strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.beneficios-detalhados li p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Acao */
+.acao-plano {
+    background: var(--cor-escura);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+}
+
+.acao-plano h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.acao-plano p {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.btn-grande {
+    padding: 15px 40px;
+    font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .conteudo-plano {
+        grid-template-columns: 1fr;
+    }
+
+    .plano-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .preco-grande {
+        font-size: 2.2rem;
+    }
+}
